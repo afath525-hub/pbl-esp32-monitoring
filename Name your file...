@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project PBL: Monitoring Suhu IoT - ESP32</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(56,189,248,0.1) 0%, rgba(15,23,42,1) 100%);
+    }
+    .badge {
+      background: rgba(56,189,248,0.2);
+      color: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 1rem 0 0.5rem;
+    }
+    p.subtitle {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .container {
+      display: block;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .metric-box {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 1rem;
+      border: 1px solid var(--border);
+    }
+    .metric-val {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="badge">Project-Based Learning (PBL)</span>
+    <h1>Sistem Monitoring Suhu & Kelembapan Real-Time</h1>
+    <p class="subtitle">Implementasi Node Mikrokontroler ESP32 dan Sensor DHT22 berbasis IoT untuk Pembacaan Parameter Lingkungan.</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <!-- Deskripsi Sistem -->
+      <div class="card">
+        <h3> Deskripsi Project</h3>
+        <p>Sistem ini dirancang untuk memantau suhu dan kelembapan secara kontinu. Mikrokontroler ESP32 membaca data dari sensor DHT22, kemudian mengirimkan data tersebut via jaringan Wi-Fi ke server/dashboard online.</p>
+        
+        <div class="metric-box">
+          <div>Status Koneksi</div>
+          <div class="metric-val">Wi-Fi Connected</div>
+        </div>
+      </div>
+
+      <!-- Spesifikasi Komponen -->
+      <div class="card">
+        <h3> Spesifikasi Hardware & Software</h3>
+        <ul>
+          <li><strong>Mikrokontroler:</strong> ESP32 NodeMCU (Wi-Fi + BLE)</li>
+          <li><strong>Sensor:</strong> DHT22 / DHT11 (Suhu & Kelembapan)</li>
+          <li><strong>Catu Daya:</strong> 5V DC via Micro-USB / Adapter</li>
+          <li><strong>IDE:</strong> VS Code / PlatformIO / Arduino IDE</li>
+          <li><strong>Protokol Data:</strong> MQTT / HTTP REST API</li>
+        </ul>
+      </div>
+
+      <!-- Informasi Tim -->
+      <div class="card">
+        <h3> Tim Pengembang</h3>
+        <ul>
+          <li><strong>Ketua Tim:</strong> Azka Aisy (Hardware & Wiring)</li>
+          <li><strong>Anggota 1:</strong> Anggota A (Firmware C/C++)</li>
+          <li><strong>Anggota 2:</strong> Anggota B (Dashboard & Web UI)</li>
+          <li><strong>Dosen Pembimbing:</strong> Pembimbing Utama, S.T., M.T.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 PBL Teknik Elektro & Mechatronics. All rights reserved.
+  </footer>
+
+</body>
+</html>
